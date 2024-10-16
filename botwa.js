@@ -15,8 +15,6 @@ const client = new Client({
     },
 });
 
-let isBotActivated = false;
-
 client.on('qr', (qr) => {
     qrcode.generate(qr, { small: true });
 });
@@ -31,7 +29,6 @@ client.on('message', async (msg) => {
     }
 
     if (msg.body === 'bot baak') {
-        isBotActivated = true;
         const response = `Selamat Datang di Bot Akademik BAAK Gunadarma, silahkan ketik angka untuk melihat (misal: "1" untuk lihat Berita Terbaru BAAK"):\n\n`
                       + `1. Berita Terbaru BAAK\n`
                       + `2. Kalender Akademik\n`
