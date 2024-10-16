@@ -270,20 +270,6 @@ client.on('message', async (msg) => {
             return "Input tidak valid. Mohon masukkan kata kunci 'ujian bentrok' untuk melihat prosedur pengurusan ujian bentrok.";
         }
     }
-
-    const validOptions = ['1', '2', '3', '4', '5', '6', '7', 'bot baak'];
-    if (!validOptions.includes(msg.body.toLowerCase())) {
-        const response = `Ketik sesuai pilihan yang tersedia:\n\n`
-                      + `1. Berita Terbaru BAAK\n`
-                      + `2. Kalender Akademik\n`
-                      + `3. Jadwal Kuliah\n`
-                      + `4. Daftar Mata Kuliah\n`
-                      + `5. Waktu Kuliah\n`
-                      + `6. Jadwal Ujian\n`
-                      + `7. Ujian Bentrok`;
-
-        await client.sendMessage(msg.from, response);
-    }
 });
 
 client.initialize();
